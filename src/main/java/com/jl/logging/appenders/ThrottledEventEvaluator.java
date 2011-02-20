@@ -1,4 +1,4 @@
-package com.jl.com.jl.logging.appenders;
+package com.jl.logging.appenders;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.spi.LoggingEvent;
@@ -26,6 +26,7 @@ public class ThrottledEventEvaluator implements TriggeringEventEvaluator {
    private long numberOfTriggers;
 
    public boolean isTriggeringEvent(LoggingEvent event) {
+      if(intervalLength == 0) return false;
       if(!isErrorOrHigher(event)) {
          return false;
       }
