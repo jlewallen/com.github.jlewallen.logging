@@ -1,4 +1,4 @@
-package com.jl.logging.appenders;
+package com.github.jlewallen.logging;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.spi.LoggingEvent;
