@@ -13,8 +13,16 @@ public class ThrottledEventEvaluator implements TriggeringEventEvaluator {
 
    private int intervalLength;
 
+   public int getMaximumPerInterval() {
+      return maximumPerInterval;
+   }
+
    public void setMaximumPerInterval(int maximumPerInterval) {
       this.maximumPerInterval = maximumPerInterval;
+   }
+
+   public int getIntervalLength() {
+      return intervalLength;
    }
 
    public void setIntervalLength(int intervalLength) {
